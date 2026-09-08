@@ -13,6 +13,10 @@ export const profile = {
   linkedin: "https://linkedin.com",
   location: "Assam, India",
   status: "Open for New Opportunities",
+  statusBanner: {
+    status: "Open for Opportunities",
+    variant: "available", // Options: 'available' | 'busy' | 'freelancing' | 'unavailable'
+  },
   avatar: "/favicon.svg",
   stats: [
     { label: "Years of Craft", value: "2+" },

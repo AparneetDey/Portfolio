@@ -1,7 +1,7 @@
 import { profile } from "../../data/profile";
 import { PixelButton } from "../ui/PixelButton";
-import { PixelBadge } from "../ui/PixelBadge";
 import { CampfireObject } from "../world/WorldObjects";
+import { StatusBanner } from "../ui/StatusBanner";
 
 /**
  * Area 1: HOME / START — The Campfire Clearing
@@ -11,16 +11,18 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-16 sm:py-24"
+      className="relative min-h-[90vh] flex flex-col items-center text-center px-4 pt-0 pb-16 sm:pb-24"
     >
-      <div className="max-w-3xl mx-auto space-y-6">
-        {/* Status Badge */}
-        <div className="inline-block animate-gentle-bob">
-          <PixelBadge variant="gold" size="md">
-            🛡️ {profile.status}
-          </PixelBadge>
-        </div>
+      {/* Floating Medieval Status Signboard Suspended Directly From Top Navbar */}
+      <div className="w-full flex justify-center -mt-[1px] mb-6 sm:mb-10 z-20">
+        <StatusBanner
+          status={profile.statusBanner?.status || "Open for Opportunities"}
+          variant={profile.statusBanner?.variant || "available"}
+          reachNavbar={true}
+        />
+      </div>
 
+      <div className="max-w-3xl mx-auto space-y-6 my-auto">
         {/* Hero Title & Identity */}
         <div className="space-y-3">
           <h1 className="font-['Cinzel',serif] text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#f4ebd0] tracking-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">

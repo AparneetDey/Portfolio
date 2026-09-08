@@ -1,0 +1,132 @@
+/* StatusBanner.css — Medieval Fantasy Hanging Signboard Scoped Styles */
+
+.status-banner-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+/* Very subtle, slow floating animation for suspended signboard */
+@keyframes banner-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+.status-banner-animated {
+  animation: banner-float 4s ease-in-out infinite;
+}
+
+/* Compact wooden signboard frame with pixel-art borders */
+.status-board-frame {
+  position: relative;
+  background-color: #55331a;
+  background-image: 
+    linear-gradient(180deg, #6a3e20 0%, #4e2d17 50%, #382010 100%);
+  border: 3px solid #24140a;
+  box-shadow: 
+    0 4px 0 0 #150a04,
+    0 8px 16px rgba(0, 0, 0, 0.45),
+    inset 0 2px 0 0 #8c522b,
+    inset 0 -2px 0 0 #24140a,
+    inset 2px 0 0 0 #734524,
+    inset -2px 0 0 0 #24140a;
+}
+
+/* Stepped pixel corner notch clip for authentic 16-bit look */
+.pixel-cut-corners {
+  clip-path: polygon(
+    0 3px, 3px 3px, 3px 0,
+    calc(100% - 3px) 0, calc(100% - 3px) 3px, 100% 3px,
+    100% calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%,
+    3px 100%, 3px calc(100% - 3px), 0 calc(100% - 3px)
+  );
+}
+
+/* Inner aged parchment panel */
+.status-parchment-panel {
+  background-color: #f4ebd0;
+  background-image: 
+    linear-gradient(180deg, #fbf6ec 0%, #f4ebd0 45%, #e8d8b0 100%);
+  border: 1.5px solid #b89e68;
+  box-shadow: 
+    0 2px 0 0 #24140a,
+    inset 0 1.5px 0 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1.5px 0 0 rgba(147, 120, 73, 0.4),
+    inset 1.5px 0 0 0 rgba(255, 255, 255, 0.4),
+    inset -1.5px 0 0 0 rgba(147, 120, 73, 0.4);
+}
+
+/* Refined corner metal reinforcement plates */
+.status-metal-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #78540c;
+  border: 1.5px solid #24140a;
+  box-shadow: inset 1px 1px 0 0 #fad97f, inset -1px -1px 0 0 #3d2312;
+  z-index: 10;
+}
+
+.status-metal-corner::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 3px;
+  height: 3px;
+  background: #fad97f;
+  border: 0.5px solid #3d2312;
+}
+
+.status-metal-corner.tl { top: -2px; left: -2px; }
+.status-metal-corner.tr { top: -2px; right: -2px; }
+.status-metal-corner.bl { bottom: -2px; left: -2px; }
+.status-metal-corner.br { bottom: -2px; right: -2px; }
+
+/* Chain mounting brackets on top edge */
+.status-chain-bracket {
+  position: absolute;
+  top: -6px;
+  width: 14px;
+  height: 12px;
+  background: #78540c;
+  border: 1.5px solid #24140a;
+  box-shadow: 
+    0 2px 0 0 #150a04,
+    inset 1px 1px 0 0 #fad97f;
+  z-index: 12;
+}
+
+.status-chain-bracket::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 3px;
+  height: 3px;
+  background: #fad97f;
+  border: 0.5px solid #3d2312;
+}
+
+/* Subtle pulse for lantern flame */
+@keyframes lantern-flicker-subtle {
+  0%, 100% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 5px rgba(243, 194, 78, 0.45));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(243, 194, 78, 0.65));
+  }
+}
+
+.status-lantern-glow {
+  animation: lantern-flicker-subtle 2.8s ease-in-out infinite;
+}
