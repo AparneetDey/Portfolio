@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: 'Pixelify Sans', monospace;
+  --font-medieval: 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Parchment palette */
+  --color-parchment-50: #fdfbf7;
+  --color-parchment-100: #fbf6ec;
+  --color-parchment-200: #f4ebd0;
+  --color-parchment-300: #e8d8b0;
+  --color-parchment-400: #d4be8a;
+  --color-parchment-500: #ba9e68;
+  --color-parchment-600: #937849;
+  --color-parchment-800: #493922;
+  --color-parchment-900: #2d2215;
+
+  /* Medieval deep slate / night background */
+  --color-realm-950: #0a0e14;
+  --color-realm-900: #101620;
+  --color-realm-850: #141b27;
+  --color-realm-800: #192231;
+  --color-realm-750: #1f2a3c;
+  --color-realm-700: #263449;
+  --color-realm-600: #354763;
+
+  /* Timber / Wood palette */
+  --color-timber-900: #24140a;
+  --color-timber-800: #382010;
+  --color-timber-700: #4e2d17;
+  --color-timber-600: #6a3e20;
+  --color-timber-500: #8c522b;
+  --color-timber-400: #b06f3c;
+
+  /* Stone slate palette */
+  --color-stone-slate-900: #171b22;
+  --color-stone-slate-800: #222731;
+  --color-stone-slate-700: #313845;
+  --color-stone-slate-600: #444e60;
+  --color-stone-slate-500: #5c6981;
+  --color-stone-slate-400: #7b8aa3;
+
+  /* Muted Forest Moss Green */
+  --color-moss-900: #142217;
+  --color-moss-800: #1d3322;
+  --color-moss-700: #2a4931;
+  --color-moss-600: #3b6645;
+  --color-moss-500: #50865c;
+  --color-moss-400: #6ea97c;
+  --color-moss-300: #96c7a2;
+
+  /* Muted Harbor & Twilight Blue */
+  --color-harbor-900: #111d27;
+  --color-harbor-800: #1a2c3a;
+  --color-harbor-700: #263e52;
+  --color-harbor-600: #375772;
+  --color-harbor-500: #4c7598;
+  --color-harbor-400: #6b95b9;
+
+  /* Warm Gold / Lantern */
+  --color-gold-900: #533a08;
+  --color-gold-800: #78540c;
+  --color-gold-700: #a07111;
+  --color-gold-600: #c99119;
+  --color-gold-500: #e2a828;
+  --color-gold-400: #f3c24e;
+  --color-gold-300: #fad97f;
+  --color-gold-200: #fdedbb;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  background-color: var(--color-realm-950);
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-realm-950);
+  color: #e2e8f0;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Pixel rendering helper */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Custom Pixelated Borders */
+.pixel-border-stone {
+  box-shadow:
+    0 -3px 0 0 #171b22,
+    0 3px 0 0 #171b22,
+    -3px 0 0 0 #171b22,
+    3px 0 0 0 #171b22,
+    inset 0 2px 0 0 #444e60,
+    inset 0 -2px 0 0 #171b22,
+    inset 2px 0 0 0 #444e60,
+    inset -2px 0 0 0 #171b22;
+}
+
+.pixel-border-wood {
+  box-shadow:
+    0 -3px 0 0 #24140a,
+    0 3px 0 0 #24140a,
+    -3px 0 0 0 #24140a,
+    3px 0 0 0 #24140a,
+    inset 0 2px 0 0 #8c522b,
+    inset 0 -2px 0 0 #24140a,
+    inset 2px 0 0 0 #8c522b,
+    inset -2px 0 0 0 #24140a;
+}
+
+.pixel-border-gold {
+  box-shadow:
+    0 -3px 0 0 #533a08,
+    0 3px 0 0 #533a08,
+    -3px 0 0 0 #533a08,
+    3px 0 0 0 #533a08,
+    inset 0 2px 0 0 #fad97f,
+    inset 0 -2px 0 0 #78540c,
+    inset 2px 0 0 0 #fad97f,
+    inset -2px 0 0 0 #78540c;
+}
+
+.pixel-border-parchment {
+  box-shadow:
+    0 -3px 0 0 #937849,
+    0 3px 0 0 #937849,
+    -3px 0 0 0 #937849,
+    3px 0 0 0 #937849,
+    inset 0 2px 0 0 #fdfbf7,
+    inset 0 -2px 0 0 #ba9e68,
+    inset 2px 0 0 0 #fdfbf7,
+    inset -2px 0 0 0 #ba9e68;
+}
+
+/* Stepped pixel corner notch clip path */
+.pixel-corners {
+  clip-path: polygon(
+    0 4px, 4px 4px, 4px 0,
+    calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+    100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+    4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
+  );
+}
+
+.pixel-corners-lg {
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+/* Subtle gentle floating animation for world elements */
+@keyframes gentle-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-gentle-bob {
+  animation: gentle-bob 3s ease-in-out infinite;
+}
+
+/* Torch / Lantern glow flicker */
+@keyframes lantern-flicker {
+  0%, 100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(243, 194, 78, 0.35));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(243, 194, 78, 0.55));
+  }
+}
+
+.animate-lantern {
+  animation: lantern-flicker 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar matching medieval theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101620;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #313845;
+  border: 2px solid #101620;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e2d17;
+}
