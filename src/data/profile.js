@@ -1,49 +1,58 @@
 /**
  * Profile and developer journey information.
  * Centralized data source for hero, about, and contact sections.
+ * Updated with authentic resume credentials (Softgear Technologies, Chandigarh University).
  */
 export const profile = {
   name: "Aparneet Dey",
-  title: "Full-Stack Developer & Game Developer",
-  tagline: "Crafting digital realms, resilient web applications, and intuitive user journeys.",
+  title: "Full-Stack Developer · Game Developer",
+  headline: "Full-Stack Developer | Undergrad | Building awesome projects | Exploring new technologies and ideas",
+  tagline: "Building full-stack web applications, interactive Three.js experiences, and 2D indie games with Godot.",
   description:
-    "A software engineer passionate about clean software craftsmanship, modern web architecture, and interactive digital worlds. Blending aesthetic design with robust, reliable engineering.",
+    "Computer Science undergraduate at Chandigarh University (2024–2028) with commercial frontend engineering experience at Softgear Technologies. Passionate about full-stack web architecture, API integration, 3D graphics with Three.js, and creative game development.",
+  phone: "+91 9395745637",
   email: "aparnitd@gmail.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  location: "Assam, India",
-  status: "Open for New Opportunities",
+  github: "https://github.com/AparneetDey",
+  linkedin: "https://www.linkedin.com/in/aparneet-dey-9098a5323",
+  leetcode: "https://leetcode.com/u/AparneetDey/",
+  location: "Chandigarh, India",
+  education: {
+    institution: "Chandigarh University",
+    period: "2024 — 2028",
+    status: "Undergraduate",
+  },
+  status: "Open to opportunities",
   statusBanner: {
     status: "Open for Opportunities",
     variant: "available", // Options: 'available' | 'busy' | 'freelancing' | 'unavailable'
   },
   avatar: "/favicon.svg",
   stats: [
-    { label: "Years of Craft", value: "2+" },
-    { label: "Completed Quests", value: "15+" },
+    { label: "Years of Craft", value: "2+ Years" },
+    { label: "Industry Service", value: "9 Months" },
+    { label: "Featured Quests", value: "6 Projects" },
     { label: "Code Commits", value: "1,400+" },
-    { label: "Elixirs Brewed (Coffee)", value: "∞" },
   ],
   traits: [
     {
-      title: "Clean Architecture",
-      description: "Writing maintainable, modular, and well-tested code with clear separation of concerns.",
-      icon: "scroll",
+      title: "Frontend Engineering & Three.js",
+      description: "Optimizing responsive web interfaces, managing component libraries, and exploring 3D web with Three.js.",
+      icon: "cube",
     },
     {
-      title: "Full-Stack Versatility",
-      description: "Comfortable navigating database depths, server corridors, and frontend interfaces.",
-      icon: "anvil",
+      title: "Full-Stack & API Architecture",
+      description: "Handling seamless REST API integration between frontends and backend services with Node.js and Spring Boot.",
+      icon: "atom",
     },
     {
-      title: "Continuous Exploration",
-      description: "Ever-curious learner venturing into emerging tools, performance tuning, and design systems.",
-      icon: "compass",
-    },
-    {
-      title: "Game Development",
-      description: "Building interactive game experiences while exploring game mechanics, level design, and engaging player interactions.",
+      title: "Game Development & Pixel Art",
+      description: "Designing 2D platformers and action combat mechanics using Godot Engine, GDScript, and Aseprite.",
       icon: "gamepad",
+    },
+    {
+      title: "Quick Grasping & Active Listening",
+      description: "Fast learner adaptable to modern tech stacks, rapid game jams, and collaborative cross-functional team workflows.",
+      icon: "scroll",
     },
   ],
 };

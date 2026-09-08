@@ -1,53 +1,53 @@
 /**
  * Developer journey & career milestones (The Road).
- * Structured as expedition checkpoints along the continuous developer path.
+ * Structured as expedition checkpoints reflecting Aparneet's authentic professional experience.
  */
 export const experience = [
   {
-    id: "senior-frontend-guild",
-    role: "Senior Frontend Engineer",
-    company: "Ironwood Studios / Tech Guild",
-    period: "2023 — Present",
-    location: "Remote / Hybrid",
-    type: "Current Expedition",
+    id: "softgear-technologies",
+    role: "Frontend Web Developer",
+    company: "Softgear Technologies Private Limited",
+    period: "October 2025 — June 2026 (9 months)",
+    location: "Mohali District, India",
+    type: "Commercial Guild Expedition",
     description:
-      "Spearheading design system architecture and leading frontend performance initiatives across core client-facing web applications.",
+      "Working on optimizing and managing frontend architecture while handling seamless REST API communication with backend microservices. Implementing modern UI features, responsive design, and scalable component systems.",
     highlights: [
-      "Reduced main bundle load times by 38% through route splitting and asset streaming.",
-      "Established reusable component library adopted across 4 internal product squads.",
-      "Mentored junior developers through weekly architecture roundtables and code reviews.",
+      "Optimized and managed frontend client applications for performance, fast load times, and clean component state.",
+      "Integrated RESTful APIs between frontend views and backend services with robust error handling.",
+      "Engineered new UI features and responsive components matching design specifications.",
     ],
-    technologies: ["React", "JavaScript", "Tailwind CSS", "Vite", "REST APIs"],
+    technologies: ["React", "JavaScript", "Tailwind CSS", "REST APIs", "Vite"],
   },
   {
-    id: "fullstack-developer-citadel",
-    role: "Full-Stack Web Developer",
-    company: "Citadel Digital Labs",
-    period: "2021 — 2023",
-    location: "Metro Outpost",
-    type: "Major Campaign",
+    id: "fullstack-gamedev-indie",
+    role: "Full-Stack Developer & Game Developer",
+    company: "Indie Web & Creative Games",
+    period: "2024 — Present",
+    location: "Chandigarh, India",
+    type: "Creative Campaign",
     description:
-      "Engineered end-to-end features for high-traffic SaaS dashboards, integrated third-party APIs, and maintained reliable relational database schemas.",
+      "Engineering full-stack web applications with modern React 19, Node.js, and Spring Boot, while independently creating 2D platformers and action combat games with Godot Engine and GDScript.",
     highlights: [
-      "Architected real-time notification engine serving over 15,000 active daily users.",
-      "Streamlined deployment pipelines using modern CI/CD scripts, cutting deploy incidents by 50%.",
-      "Collaborated closely with product designers to translate wireframes into accessible UI.",
+      "Published 'Fist of Fury' and 'InviKnight' on Itch.io with custom Aseprite pixel art, animations, and combat mechanics.",
+      "Architected BitArcade v2 discovery platform indexing 500K+ games via the RAWG API with Appwrite auth.",
+      "Maintained consistent commit streaks and active open-source repositories on GitHub.",
     ],
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "Git"],
+    technologies: ["React 19", "Godot", "GDScript", "Node.js", "Express", "Appwrite", "Tailwind CSS"],
   },
   {
-    id: "junior-software-apprentice",
-    role: "Software Engineering Apprentice",
-    company: "Wayfarer Tech Collective",
-    period: "2020 — 2021",
-    location: "Northern Hub",
-    type: "Early Journey",
+    id: "chandigarh-university-academics",
+    role: "Undergraduate Computer Science Scholar",
+    company: "Chandigarh University",
+    period: "2024 — 2028",
+    location: "Chandigarh, India",
+    type: "Academic Foundation",
     description:
-      "Built responsive client portals, resolved frontend defects, and implemented automated end-to-end browser test suites.",
+      "Pursuing Bachelor of Engineering in Computer Science. Rigorous coursework covering Data Structures & Algorithms, Object-Oriented Software Engineering, Operating Systems, Database Management Systems, and Web Technologies.",
     highlights: [
-      "Refactored legacy vanilla JavaScript widgets into modern modular components.",
-      "Created internal documentation and interactive onboarding guides for new recruits.",
+      "Developed the Student Grievance & Feedback Portal with Spring Boot, Spring Data JPA, and MySQL.",
+      "Practiced algorithmic problem solving and dynamic programming challenges on LeetCode.",
     ],
-    technologies: ["JavaScript", "HTML5", "CSS3", "Git", "REST APIs"],
+    technologies: ["Java", "Spring Boot", "MySQL", "C", "C++", "Python", "Data Structures"],
   },
 ];

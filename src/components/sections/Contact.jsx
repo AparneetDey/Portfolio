@@ -135,18 +135,29 @@ export function Contact() {
           <PixelPanel variant="stone">
             <h4 className="font-['Cinzel',serif] text-base font-bold text-[#f4ebd0] mb-2 flex items-center gap-2">
               <PixelIcon name="mail" className="w-5 h-5 text-[#fad97f]" />
-              Direct Mail Post
+              Direct Mail & Signal Post
             </h4>
             <p className="text-xs text-[#94a3b8] font-['Plus_Jakarta_Sans',sans-serif] mb-3">
-              For urgent quest dispatches or formal opportunities:
+              For urgent quest dispatches, contract inquiries, or engineering roles:
             </p>
-            <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 text-sm font-['Pixelify_Sans',monospace] text-[#fad97f] hover:underline"
-            >
-              <span>✉</span>
-              <span>{profile.email}</span>
-            </a>
+            <div className="space-y-1.5">
+              <a
+                href={`mailto:${profile.email}`}
+                className="flex items-center gap-2 text-sm font-['Pixelify_Sans',monospace] text-[#fad97f] hover:underline"
+              >
+                <span>✉</span>
+                <span>{profile.email}</span>
+              </a>
+              {profile.phone && (
+                <a
+                  href={`tel:${profile.phone}`}
+                  className="flex items-center gap-2 text-xs font-['Pixelify_Sans',monospace] text-[#94a3b8] hover:text-[#fad97f] hover:underline"
+                >
+                  <span>📞</span>
+                  <span>{profile.phone}</span>
+                </a>
+              )}
+            </div>
           </PixelPanel>
 
           <PixelPanel variant="stone">
@@ -167,7 +178,7 @@ export function Contact() {
               <PixelIcon name="github" className="w-5 h-5 text-[#cbd5e1]" />
               External Guild Archives
             </h4>
-            <div className="flex gap-2 pt-1">
+            <div className="flex flex-wrap gap-2 pt-1">
               <PixelButton
                 variant="stone"
                 size="sm"
@@ -186,6 +197,17 @@ export function Contact() {
               >
                 LinkedIn Outpost
               </PixelButton>
+              {profile.leetcode && (
+                <PixelButton
+                  variant="stone"
+                  size="sm"
+                  href={profile.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LeetCode Trials
+                </PixelButton>
+              )}
             </div>
           </PixelPanel>
         </div>

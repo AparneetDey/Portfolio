@@ -26,16 +26,19 @@ export function About() {
             subtitle="Registered Resident & Realm Artisan"
             waxSeal={true}
           >
-            <div className="space-y-4 text-[#2d2215]">
+            <div className="space-y-4 text-parchment-900">
               <p className="text-base sm:text-lg font-medium leading-relaxed">
                 {profile.description}
               </p>
-              <p className="text-sm sm:text-base leading-relaxed text-[#493922]">
+              <p className="text-sm sm:text-base leading-relaxed text-parchment-800-800">
                 Every project is approached not merely as syntax and endpoints, but as a deliberate digital settlement built to weather changing demands, high traffic, and time. Clean architecture, high readability, and human empathy remain the guiding stars of my daily craft.
               </p>
 
-              <div className="pt-4 border-t border-[#ba9e68]/50 flex flex-wrap items-center justify-between text-xs text-[#5c4728] font-['Pixelify_Sans',monospace]">
-                <span>📍 Location: {profile.location}</span>
+              <div className="pt-4 border-t border-[#ba9e68]/50 flex flex-wrap items-center justify-between gap-2 text-xs text-[#5c4728] font-['Pixelify_Sans',monospace]">
+                <span>📍 Base: {profile.location}</span>
+                {profile.education && (
+                  <span>🎓 {profile.education.institution} ({profile.education.period})</span>
+                )}
                 <span>✉️ {profile.email}</span>
               </div>
             </div>
@@ -44,7 +47,7 @@ export function About() {
 
         {/* Character Core Traits & Specializations */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="font-['Pixelify_Sans',monospace] text-xs uppercase tracking-widest text-[#fad97f] px-1">
+          <div className="font-pixel text-xs uppercase tracking-widest text-gold-300 px-1">
             Adventurer Traits & Disciplines
           </div>
 
@@ -52,14 +55,14 @@ export function About() {
             <PixelPanel
               key={trait.title}
               variant="stone"
-              className="hover:border-[#78540c] transition-colors"
+              className="hover:border-gold-800 transition-colors"
             >
               <div className="flex items-start gap-3.5">
-                <div className="p-2 bg-[#222731] border border-[#313845] text-[#fad97f] shrink-0">
+                <div className="p-2 bg-stone-slate-800 border border-stone-slate-700 text-gold-300 shrink-0">
                   <PixelIcon name={trait.icon} className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-['Cinzel',serif] text-base font-bold text-[#f4ebd0]">
+                  <h4 className="font-['Cinzel',serif] text-base font-bold text-parchment-200">
                     {trait.title}
                   </h4>
                   <p className="font-['Plus_Jakarta_Sans',sans-serif] text-xs sm:text-sm text-[#94a3b8] mt-1 leading-relaxed">

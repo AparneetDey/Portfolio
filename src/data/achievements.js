@@ -4,43 +4,43 @@
  */
 export const achievements = [
   {
-    id: "hackathon-champion",
-    title: "1st Place — Open Realm Hackathon",
-    category: "Guild Honors",
-    date: "Autumn 2024",
-    issuer: "Global Web Guild",
+    id: "softgear-technologies-service",
+    title: "Commercial Frontend Web Developer — Softgear Technologies",
+    category: "Industry Expedition",
+    date: "2025 — 2026",
+    issuer: "Softgear Technologies Pvt. Ltd.",
     description:
-      "Awarded top honors among 120 participating teams for building an accessible offline-first disaster coordination portal in under 48 hours.",
-    badge: "trophy",
-  },
-  {
-    id: "open-source-contributor",
-    title: "Key Open-Source Contributor",
-    category: "Community Quest",
-    date: "2023 — Present",
-    issuer: "React Ecosystem & Web Tooling",
-    description:
-      "Merged 30+ pull requests fixing critical accessibility issues, documentation clarity, and bundle performance across major community libraries.",
-    badge: "star",
-  },
-  {
-    id: "architecture-certification",
-    title: "Certified Cloud & Web Systems Specialist",
-    category: "Scholar Scroll",
-    date: "Spring 2023",
-    issuer: "Cloud Architecture Academy",
-    description:
-      "Demonstrated mastery of distributed systems architecture, resilient API gateways, security best practices, and caching strategies.",
+      "Delivered 9 months of production frontend engineering in Mohali district: optimized client interfaces, implemented new components, and coordinated frontend-to-backend API pipelines.",
     badge: "shield",
   },
   {
-    id: "speaker-symposium",
-    title: "Symposium Speaker: 'Crafting Calm Interfaces'",
-    category: "Guild Council",
-    date: "Winter 2023",
-    issuer: "Frontend Conclave 2023",
+    id: "chandigarh-university-scholar",
+    title: "Computer Science Scholar — Chandigarh University",
+    category: "Academic Quest",
+    date: "2024 — 2028",
+    issuer: "Chandigarh University",
     description:
-      "Delivered a 35-minute keynote on reducing digital fatigue through cozy aesthetics, micro-interactions, and accessible typography in modern web development.",
+      "Selected for undergraduate Computer Science & Engineering degree program. Demonstrating continuous academic growth in software design, algorithms, and full-stack systems.",
     badge: "scroll",
+  },
+  {
+    id: "game-jam-inviknight",
+    title: "Game Jam Contender — InviKnight",
+    category: "Game Dev Quest",
+    date: "2024",
+    issuer: "Indie Game Jam Community",
+    description:
+      "Successfully conceptualized, animated, and delivered a 2D stealth-action platformer under strict jam constraints using Godot, GDScript, and Aseprite. Published to Itch.io.",
+    badge: "trophy",
+  },
+  {
+    id: "bitarcade-platform",
+    title: "500K+ Games Discovery Platform — BitArcade v2",
+    category: "Web Engineering",
+    date: "2024",
+    issuer: "Full-Stack Project",
+    description:
+      "Rebuilt a high-performance web discovery portal integrating the RAWG API, Appwrite authentication, and custom recommendation algorithms with React 19 and Tailwind CSS.",
+    badge: "star",
   },
 ];

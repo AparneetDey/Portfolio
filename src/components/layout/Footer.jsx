@@ -49,6 +49,17 @@ export function Footer() {
           >
             <PixelIcon name="external-link" className="w-5 h-5" />
           </a>
+          {profile.leetcode && (
+            <a
+              href={profile.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 bg-[#222731] border border-[#313845] text-[#cbd5e1] hover:text-[#fad97f] hover:border-[#78540c] shadow-[0_2px_0_0_#0a0e14] transition-all active:translate-y-[1px]"
+              title="LeetCode Outpost"
+            >
+              <PixelIcon name="leetcode" className="w-5 h-5" />
+            </a>
+          )}
         </div>
 
         {/* Copyright & Lore Stamp */}
