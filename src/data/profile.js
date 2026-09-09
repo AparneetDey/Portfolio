@@ -27,6 +27,7 @@ export const profile = {
     variant: "available", // Options: 'available' | 'busy' | 'freelancing' | 'unavailable'
   },
   avatar: "/profile.jpeg",
+  character: "/characters/aparneet-hero.png",
   stats: [
     { label: "Years of Craft", value: "2+ Years" },
     { label: "Industry Service", value: "9 Months" },
