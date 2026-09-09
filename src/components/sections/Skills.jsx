@@ -88,11 +88,6 @@ export function Skills() {
           <div className="hidden xl:flex flex-col items-center w-[220px] flex-shrink-0 pt-2">
             {/* Hanging Wooden Signboard with Chains */}
             <div className="flex flex-col items-center">
-              {/* Chains from above */}
-              <div className="flex justify-between w-28 px-4">
-                <div className="w-1.5 h-10 bg-gradient-to-b from-[#24140a] via-[#52311b] to-[#24140a] border-x border-[#120803]" />
-                <div className="w-1.5 h-10 bg-gradient-to-b from-[#24140a] via-[#52311b] to-[#24140a] border-x border-[#120803]" />
-              </div>
 
               {/* Wooden Sign Frame */}
               <div className="relative bg-[#2e180d] p-1 border-2 border-[#1a0c05] shadow-xl rounded-sm">
@@ -116,36 +111,6 @@ export function Skills() {
                 "Tools are just the beginning. It's what we build with them that matters."
               </p>
               <div className="text-center text-[9px] text-[#78540c] mt-1">❖</div>
-            </div>
-
-            {/* Scholar's Desk: Sleeping Cat, Glowing Lantern & Stacked Books */}
-            <div className="mt-8 w-full flex flex-col items-center">
-              <div className="flex items-end justify-center gap-3">
-                {/* Glowing Lantern */}
-                <div className="flex flex-col items-center">
-                  <div className="w-8 h-10 bg-[#e5a828]/20 border-2 border-[#533a08] rounded-sm flex items-center justify-center relative animate-lantern-flicker shadow-[0_0_15px_rgba(245,180,50,0.4)]">
-                    <PixelIcon name="flame" className="w-6 h-6 text-[#fad97f]" />
-                  </div>
-                  <div className="w-10 h-1.5 bg-[#24140a] border-t border-[#78540c]" />
-                </div>
-
-                {/* Sleeping Pixel Cat */}
-                <div className="flex flex-col items-center" title="The library guardian cat">
-                  <div className="w-10 h-7 text-[#f97316] relative flex items-center justify-center">
-                    <PixelIcon name="cat" className="w-9 h-9 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]" />
-                  </div>
-                  <div className="w-12 h-1 bg-[#1a0f07]" />
-                </div>
-              </div>
-
-              {/* Stacked ancient books on the desk */}
-              <div className="flex flex-col items-center mt-1">
-                <div className="w-20 h-2 bg-[#7d1c21] border border-[#24140a] rounded-t-sm" />
-                <div className="w-24 h-2.5 bg-[#1e4179] border border-[#24140a]" />
-                <div className="w-28 h-3 bg-[#5a341e] border border-[#24140a]" />
-                {/* Desk tabletop */}
-                <div className="w-36 h-3 bg-[#3d2212] border-t border-[#784422] border-b-2 border-[#150a04]" />
-              </div>
             </div>
           </div>
 
@@ -287,42 +252,6 @@ export function Skills() {
                   </p>
                 </div>
               )}
-            </div>
-
-            {/* Right Desk Props: Banner & Philosophy Stack */}
-            <div className="hidden xl:flex flex-col items-center mt-6 w-full">
-              {/* Guild Banner */}
-              <div className="bg-[#11284d] border-2 border-[#2b5ea9] text-[#e0f2fe] p-2.5 text-center shadow-lg rounded-sm w-[260px] relative">
-                <div className="font-['Cinzel',serif] text-xs font-bold tracking-wider text-[#fad97f] uppercase">
-                  Better Developers
-                </div>
-                <div className="font-['Cinzel',serif] text-[10px] tracking-widest text-[#bfdbfe] uppercase">
-                  Brighter Worlds
-                </div>
-                {/* Banner tail */}
-                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[10px] border-t-[#11284d]" />
-              </div>
-
-              {/* Scholar's Stack of Books: BUILD / LEARN / GROW / REPEAT */}
-              <div className="flex flex-col items-center mt-6">
-                <div className="px-3 py-0.5 bg-[#78389b] border border-[#24140a] text-[9px] font-mono text-[#fad97f] font-bold rounded-t-sm">
-                  BUILD
-                </div>
-                <div className="px-4 py-0.5 bg-[#0d697b] border border-[#24140a] text-[9px] font-mono text-white font-bold">
-                  LEARN
-                </div>
-                <div className="px-5 py-0.5 bg-[#17542f] border border-[#24140a] text-[9px] font-mono text-white font-bold">
-                  GROW
-                </div>
-                <div className="px-6 py-0.5 bg-[#7d1c21] border border-[#24140a] text-[9px] font-mono text-[#fad97f] font-bold">
-                  REPEAT
-                </div>
-                {/* Vintage Globe & Quill */}
-                <div className="flex items-center gap-3 mt-2 text-[#fad97f]">
-                  <span className="text-xs" title="Vintage Library Globe">🌐</span>
-                  <PixelIcon name="quill" className="w-5 h-5 text-[#fad97f]" />
-                </div>
-              </div>
             </div>
           </div>
 
