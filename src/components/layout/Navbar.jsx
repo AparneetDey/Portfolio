@@ -26,12 +26,9 @@ export function Navbar({ sections = [], activeSection = "" }) {
           onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-2 group"
         >
-          <div className="w-8 h-8 bg-[#24140a] border-2 border-[#78540c] flex items-center justify-center text-[#fad97f] font-['Cinzel',serif] font-bold text-sm shadow-[0_2px_0_0_#0a0e14] group-hover:bg-[#382010] transition-colors">
-            ⚔
-          </div>
           <div className="flex flex-col">
             <span className="font-['Cinzel',serif] text-sm sm:text-base font-bold text-[#f4ebd0] tracking-wider leading-none">
-              APARNEET
+              APARNEET DEY
             </span>
             <span className="font-['Pixelify_Sans',monospace] text-[10px] text-[#fad97f] uppercase tracking-widest leading-tight">
               Realm Journey

@@ -42,9 +42,23 @@ export function PixelButton({
     className
   );
 
+  const handleClick = (e) => {
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   if (href) {
     return (
-      <a href={href} className={classes} {...props}>
+      <a href={href} onClick={handleClick} className={classes} {...props}>
         {children}
       </a>
     );

@@ -19,7 +19,7 @@ export function SectionEnvironment({
   const { getParallaxStyle } = useParallax(containerRef);
 
   return (
-    <div ref={containerRef} id={id} className={`relative overflow-hidden ${className}`}>
+    <div ref={containerRef} id={id} className={`relative overflow-hidden scroll-mt-14 sm:scroll-mt-16 ${className}`}>
       {/* Generated 2D Pixel Art Background with Subtle Parallax */}
       {bgImage && (
         <div

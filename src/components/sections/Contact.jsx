@@ -151,7 +151,7 @@ export function Contact() {
               {profile.phone && (
                 <a
                   href={`tel:${profile.phone}`}
-                  className="flex items-center gap-2 text-xs font-['Pixelify_Sans',monospace] text-[#94a3b8] hover:text-[#fad97f] hover:underline"
+                  className="flex items-center gap-2 text-xs font-['Cinzel',serif] text-[#94a3b8] hover:text-[#fad97f] hover:underline"
                 >
                   <span>📞</span>
                   <span>{profile.phone}</span>
