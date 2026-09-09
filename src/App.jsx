@@ -8,6 +8,13 @@ import { Projects } from "./components/sections/Projects";
 import { Experience } from "./components/sections/Experience";
 import { Achievements } from "./components/sections/Achievements";
 import { Contact } from "./components/sections/Contact";
+import { MeadowEnvironment } from "./components/world/environments/MeadowEnvironment";
+import { VillageEnvironment } from "./components/world/environments/VillageEnvironment";
+import { LibraryEnvironment } from "./components/world/environments/LibraryEnvironment";
+import { GuildHallEnvironment } from "./components/world/environments/GuildHallEnvironment";
+import { RoadEnvironment } from "./components/world/environments/RoadEnvironment";
+import { MountainEnvironment } from "./components/world/environments/MountainEnvironment";
+import { HarborEnvironment } from "./components/world/environments/HarborEnvironment";
 import { useActiveSection } from "./hooks/useActiveSection";
 
 const SECTIONS = [
@@ -32,13 +39,33 @@ function App() {
 
       {/* The Continuous 2D Fantasy World */}
       <World activeSection={activeSection} sectionsMeta={SECTIONS}>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Achievements />
-        <Contact />
+        <MeadowEnvironment>
+          <Hero />
+        </MeadowEnvironment>
+
+        <VillageEnvironment>
+          <About />
+        </VillageEnvironment>
+
+        <LibraryEnvironment>
+          <Skills />
+        </LibraryEnvironment>
+
+        <GuildHallEnvironment>
+          <Projects />
+        </GuildHallEnvironment>
+
+        <RoadEnvironment>
+          <Experience />
+        </RoadEnvironment>
+
+        <MountainEnvironment>
+          <Achievements />
+        </MountainEnvironment>
+
+        <HarborEnvironment>
+          <Contact />
+        </HarborEnvironment>
       </World>
 
       {/* World's Edge Harbor Footer */}

@@ -13,7 +13,7 @@ import { GuildBannerObject, SignpostObject } from "../world/WorldObjects";
  */
 export function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
+    <section className="py-20 px-4 max-w-6xl mx-auto">
       <GuildBannerObject title="Guild Quests" />
 
       <SectionTitle

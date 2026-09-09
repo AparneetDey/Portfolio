@@ -1,0 +1,159 @@
+/* 16-Bit Pixel-Art RPG Game Environment Styles */
+
+.pixel-art,
+.pixel-layer {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  shape-rendering: crispEdges;
+}
+
+/* 16-Bit Discrete Stepped Sprite Animations */
+@keyframes pixelTorch {
+  0% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pixelWaterWave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pixelSmokeStep {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    opacity: 0.6;
+    transform: translateY(-4px) translateX(2px) scale(1.1);
+  }
+  66% {
+    opacity: 0.35;
+    transform: translateY(-8px) translateX(4px) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14px) translateX(6px) scale(1.4);
+  }
+}
+
+@keyframes pixelCloudDrift {
+  0% {
+    transform: translateX(-40px);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+.animate-pixel-torch {
+  animation: pixelTorch 1.4s steps(4) infinite;
+}
+
+.animate-pixel-water {
+  animation: pixelWaterWave 2.4s steps(3) infinite;
+}
+
+.animate-pixel-smoke {
+  animation: pixelSmokeStep 3s steps(4) infinite;
+}
+
+.animate-pixel-clouds {
+  animation: pixelCloudDrift 30s steps(80) infinite;
+}
+
+@keyframes pixelWaterfallFlow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-pixel-waterfall {
+  animation: pixelWaterfallFlow 0.8s steps(4) infinite;
+}
+
+@keyframes pixelBeaconPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-pixel-beacon {
+  animation: pixelBeaconPulse 2.5s steps(5) infinite;
+}
+
+/* 16-Bit Checkerboard Dithering Utilities */
+.dither-pattern-light {
+  background-image: 
+    linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.15) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.15) 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+}
+
+.dither-pattern-sky {
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.08) 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+}
+
+/* Localized Contrast Scrim: Preserves pixel-art background vibrancy while ensuring 100% UI legibility */
+.contrast-scrim-center {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 14, 20, 0.7) 0%,
+    rgba(10, 14, 20, 0.5) 55%,
+    rgba(10, 14, 20, 0.15) 80%,
+    transparent 100%
+  );
+}
+
+.contrast-scrim-wide {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 14, 20, 0.65) 0%,
+    rgba(10, 14, 20, 0.42) 60%,
+    transparent 100%
+  );
+}

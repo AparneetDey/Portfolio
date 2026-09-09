@@ -10,7 +10,6 @@ import { StatusBanner } from "../ui/StatusBanner";
 export function Hero() {
   return (
     <section
-      id="home"
       className="relative min-h-[90vh] flex flex-col items-center text-center px-4 pt-0 pb-16 sm:pb-24"
     >
       {/* Floating Medieval Status Signboard Suspended Directly From Top Navbar */}

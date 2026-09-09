@@ -11,7 +11,7 @@ import { SignpostObject } from "../world/WorldObjects";
  */
 export function About() {
   return (
-    <section id="about" className="py-20 px-4 max-w-5xl mx-auto">
+    <section className="py-20 px-4 max-w-5xl mx-auto">
       <SectionTitle
         stage="AREA II"
         title="The Village"

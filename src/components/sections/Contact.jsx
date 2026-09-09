@@ -26,7 +26,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 max-w-5xl mx-auto">
+    <section className="py-20 px-4 max-w-5xl mx-auto">
       <SectionTitle
         stage="AREA VII"
         title="The Harbor"

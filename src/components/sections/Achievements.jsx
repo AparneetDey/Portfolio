@@ -12,7 +12,7 @@ import { SignpostObject } from "../world/WorldObjects";
  */
 export function Achievements() {
   return (
-    <section id="achievements" className="py-20 px-4 max-w-5xl mx-auto">
+    <section className="py-20 px-4 max-w-5xl mx-auto">
       <SectionTitle
         stage="AREA VI"
         title="The Mountain"

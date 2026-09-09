@@ -11,7 +11,7 @@ import { SignpostObject } from "../world/WorldObjects";
  */
 export function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 max-w-4xl mx-auto">
+    <section className="py-20 px-4 max-w-4xl mx-auto">
       <SectionTitle
         stage="AREA V"
         title="The Road"

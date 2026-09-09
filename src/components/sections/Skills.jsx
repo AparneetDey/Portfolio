@@ -72,7 +72,7 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 px-3 sm:px-6 max-w-7xl mx-auto">
+    <section className="py-20 px-3 sm:px-6 max-w-7xl mx-auto">
       <SectionTitle
         stage="AREA III"
         title="The Scholar's Library & Workshop"

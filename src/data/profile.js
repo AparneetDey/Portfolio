@@ -49,10 +49,5 @@ export const profile = {
       description: "Designing 2D platformers and action combat mechanics using Godot Engine, GDScript, and Aseprite.",
       icon: "gamepad",
     },
-    {
-      title: "Quick Grasping & Active Listening",
-      description: "Fast learner adaptable to modern tech stacks, rapid game jams, and collaborative cross-functional team workflows.",
-      icon: "scroll",
-    },
   ],
 };
