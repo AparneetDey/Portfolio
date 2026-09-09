@@ -45,9 +45,6 @@ export function Player({ activeZone = "Start", className = "" }) {
           <span className="font-['Pixelify_Sans',monospace] text-xs font-bold text-[#f4ebd0] tracking-wide">
             Traveler
           </span>
-          <span className="font-['Pixelify_Sans',monospace] text-[10px] px-1 py-0.2 bg-[#78540c] text-[#fad97f]">
-            LV.24
-          </span>
         </div>
         <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[11px] text-[#94a3b8] truncate max-w-[120px]">
           Zone: {activeZone}
