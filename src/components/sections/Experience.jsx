@@ -2,7 +2,6 @@ import { experience } from "../../data/experience";
 import { SectionTitle } from "../ui/SectionTitle";
 import { PixelPanel } from "../ui/PixelPanel";
 import { PixelBadge } from "../ui/PixelBadge";
-import { SignpostObject } from "../world/WorldObjects";
 
 /**
  * Area 5: EXPERIENCE — The Road
@@ -78,8 +77,6 @@ export function Experience() {
           </div>
         ))}
       </div>
-
-      <SignpostObject label="Ascend To The Mountain" direction="right" />
     </section>
   );
 }

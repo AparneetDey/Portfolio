@@ -3,7 +3,6 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { ParchmentPanel } from "../ui/ParchmentPanel";
 import { PixelPanel } from "../ui/PixelPanel";
 import { PixelIcon } from "../ui/PixelIcon";
-import { SignpostObject } from "../world/WorldObjects";
 
 /**
  * Area 2: ABOUT — The Village
@@ -74,8 +73,6 @@ export function About() {
           ))}
         </div>
       </div>
-
-      <SignpostObject label="To The Workshop & Library" direction="right" />
     </section>
   );
 }

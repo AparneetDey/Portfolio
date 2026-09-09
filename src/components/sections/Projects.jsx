@@ -3,8 +3,8 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { PixelPanel } from "../ui/PixelPanel";
 import { PixelBadge } from "../ui/PixelBadge";
 import { PixelButton } from "../ui/PixelButton";
+import { GuildBannerObject } from "../world/WorldObjects";
 import { PixelIcon } from "../ui/PixelIcon";
-import { GuildBannerObject, SignpostObject } from "../world/WorldObjects";
 
 /**
  * Area 4: PROJECTS — The Guild Hall
@@ -94,8 +94,6 @@ export function Projects() {
           </PixelPanel>
         ))}
       </div>
-
-      <SignpostObject label="To The Road of Experience" direction="right" />
     </section>
   );
 }

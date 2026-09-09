@@ -3,7 +3,6 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { PixelPanel } from "../ui/PixelPanel";
 import { PixelBadge } from "../ui/PixelBadge";
 import { PixelIcon } from "../ui/PixelIcon";
-import { SignpostObject } from "../world/WorldObjects";
 
 /**
  * Area 6: ACHIEVEMENTS — The Mountain
@@ -58,8 +57,6 @@ export function Achievements() {
           </PixelPanel>
         ))}
       </div>
-
-      <SignpostObject label="Descend To The Harbor" direction="right" />
     </section>
   );
 }

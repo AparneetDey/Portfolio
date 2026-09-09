@@ -4,7 +4,6 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { SkillBook } from "../ui/SkillBook";
 import { SkillDetail } from "../ui/SkillDetail";
 import { PixelIcon } from "../ui/PixelIcon";
-import { SignpostObject } from "../world/WorldObjects";
 import "./Skills.css";
 
 /**
@@ -275,11 +274,6 @@ export function Skills() {
           </div>
         </div>
       )}
-
-      {/* Navigation Signpost to Next Realm */}
-      <div className="mt-12 flex justify-center">
-        <SignpostObject label="To The Guild Hall Quests" direction="right" />
-      </div>
     </section>
   );
 }
