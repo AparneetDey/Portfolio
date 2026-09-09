@@ -26,7 +26,7 @@ export const profile = {
     status: "Open for Opportunities",
     variant: "available", // Options: 'available' | 'busy' | 'freelancing' | 'unavailable'
   },
-  avatar: "/favicon.svg",
+  avatar: "/profile.jpeg",
   stats: [
     { label: "Years of Craft", value: "2+ Years" },
     { label: "Industry Service", value: "9 Months" },

@@ -2,10 +2,11 @@ import { useEffect, useState, useRef } from "react";
 
 /**
  * useParallax — Lightweight scroll-driven parallax hook for 2D layered game scenes.
- * Calculates normalized scroll offsets using requestAnimationFrame.
- * Automatically disables parallax if the user prefers reduced motion or on small screens.
+ * Calculates normalized relative scroll offsets per section using requestAnimationFrame.
+ * When a section is centered in the viewport, offset is 0.
+ * Automatically disables parallax if the user prefers reduced motion or on mobile screens (<768px).
  */
-export function useParallax() {
+export function useParallax(containerRef = null) {
   const [offsetY, setOffsetY] = useState(0);
   const rafId = useRef(null);
 
@@ -22,13 +23,20 @@ export function useParallax() {
     const handleScroll = () => {
       if (rafId.current) return;
       rafId.current = requestAnimationFrame(() => {
-        setOffsetY(window.scrollY);
+        if (containerRef && containerRef.current) {
+          const rect = containerRef.current.getBoundingClientRect();
+          // Distance from viewport center to section center
+          const viewportCenter = window.innerHeight / 2;
+          const sectionCenter = rect.top + rect.height / 2;
+          setOffsetY(sectionCenter - viewportCenter);
+        } else {
+          setOffsetY(window.scrollY);
+        }
         rafId.current = null;
       });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    // Initial call
     handleScroll();
 
     return () => {
@@ -37,15 +45,21 @@ export function useParallax() {
         cancelAnimationFrame(rafId.current);
       }
     };
-  }, []);
+  }, [containerRef]);
 
   /**
    * Helper to compute transform for a layer given a speed multiplier.
-   * Speed 0.05 = subtle background drift; 0.15 = midground drift.
+   * Speed 0.04 = subtle background drift; 0.12 = foreground drift.
    */
-  const getParallaxStyle = (speed = 0.1) => {
+  const getParallaxStyle = (speed = 0.06, direction = "vertical") => {
     if (!offsetY) return {};
     const translation = Math.round(offsetY * speed);
+    if (direction === "horizontal") {
+      return {
+        transform: `translate3d(${translation}px, 0, 0)`,
+        willChange: "transform",
+      };
+    }
     return {
       transform: `translate3d(0, ${translation}px, 0)`,
       willChange: "transform",
@@ -54,3 +68,4 @@ export function useParallax() {
 
   return { offsetY, getParallaxStyle };
 }
+
